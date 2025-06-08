@@ -1,11 +1,20 @@
-<section>
-    <h1>Mauricio Cardozo</h1>
-    <h2>Full Stack Engineer</h2>
+<section class="row common-container">
+    <h1 class="col-12 top-text">Mauricio Cardozo</h1>
+    <h2 class="col-12">Full Stack Engineer</h2>
     
-    <p>Software engineer focused on building robust, scalable solutions — driven by clarity, simplicity, and long-term maintainability.</p>
+    <p class="col-12s">Software engineer focused on building robust, scalable solutions — driven by clarity, simplicity, and long-term maintainability.</p>
 
-    <div>
-        <img src="assets/icons/linkedin.svg" class="small-icon">
-        <img src="assets/icons/github.svg" class="small-icon">
+    <ngx-typed-js 
+        [strings]="technologies" 
+        [loop]="true" 
+        [typeSpeed]="100" 
+        (stringTyped)="onStringTyped($event)"
+        (preStringTyped)="obBeforeStringTyped($event)">
+            > <span class="typing" [ngClass]="{'red-text': isRepeat, 'white-text': !isRepeat}"></span>
+    </ngx-typed-js>
+
+    <div class="social-icons-container col-12">
+        <i class="fa-brands fa-github small-icon"></i>
+        <i class="fa-brands fa-linkedin small-icon"></i>
     </div>
 </section>

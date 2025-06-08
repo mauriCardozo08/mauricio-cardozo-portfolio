@@ -1,3 +1,23 @@
 .small-icon{
-    height: 10vh;
+    font-size: 2rem;
+}
+
+.social-icons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top:5rem;
+}
+
+.top-text{
+    margin-top:5rem;
+}
+
+.common-container{
+    padding:0 1.5rem 0 3rem;
+}
+
+.red-text{
+    color: var(--secondary-text-color);
 }

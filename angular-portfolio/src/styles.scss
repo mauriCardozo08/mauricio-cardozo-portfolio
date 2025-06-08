@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'Satoshi Complete';
+    src: url('assets/fonts/Satoshi_Complete/Fonts/TTF/Satoshi-VariableItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    font-family: 'Satoshi Complete', sans-serif;
+    color: var(--text-color);
 }
 
 :root {
