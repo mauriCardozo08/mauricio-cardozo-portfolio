@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppConsts } from '../../shared/app.consts';
 
 @Component({
   selector: 'app-personal-information',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './personal-information.component.scss'
 })
 export class PersonalInformationComponent {
-
+  person = AppConsts.Person;
 }

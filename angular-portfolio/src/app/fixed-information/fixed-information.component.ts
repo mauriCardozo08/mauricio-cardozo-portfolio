@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export class FixedInformationComponent {
   technologies: string[] = AppConsts.Technologies;  
   isRepeat: boolean = false;
+  person = AppConsts.Person;
 
   onStringTyped(index: number): void {
     const currentWord = this.technologies[index];
@@ -23,4 +24,6 @@ export class FixedInformationComponent {
     const currentWord = this.technologies[index];
     this.isRepeat = !(currentWord != 'Repeat');
   }
+
+
 }

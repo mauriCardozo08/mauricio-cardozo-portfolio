@@ -1,8 +1,8 @@
 <section class="row common-container">
-    <h1 class="col-12 top-text">Mauricio Cardozo</h1>
-    <h2 class="col-12">Full Stack Engineer</h2>
+    <h1 class="col-12 top-text">{{ person.Name }}</h1>
+    <h2 class="col-12">{{ person.Name }}</h2>
     
-    <p class="col-12s">Software engineer focused on building robust, scalable solutions — driven by clarity, simplicity, and long-term maintainability.</p>
+    <p class="col-12">{{ person.SmallDescription}}</p>
 
     <ngx-typed-js 
         [strings]="technologies" 
