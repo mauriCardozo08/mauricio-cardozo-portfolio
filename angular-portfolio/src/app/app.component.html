@@ -1,2 +1,11 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<div class="container-fluid h-100 overflow-hidden px-0">
+    <div class="row h-100 no-gutters">
+        <div class="col-5 fixed-panel">
+            <app-fixed-information></app-fixed-information>
+        </div>
+        <div class="col-7 dynamic-panel">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>  
