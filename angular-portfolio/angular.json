@@ -26,7 +26,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/config"
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
@@ -84,7 +85,8 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/config"
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",

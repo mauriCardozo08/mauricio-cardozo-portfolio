@@ -1,1 +1,33 @@
-<p>personal-experience works!</p>
+<section class="row">
+    <h1 class="col-12 top-text">Career</h1>
+
+    <p class="col-12" style="white-space: pre-line;">{{ career.Description }}</p>
+
+    <div class="col-12 experiences-container">
+        <div *ngFor="let experience of career.Experiences" class="experience-card">
+            <div class="experience-header">
+                <h2 class="company-name">{{ experience.Company }}</h2>
+                <h3 class="position-title">{{ experience.Position }}</h3>
+                <span class="date-range">{{ experience.StartDate }} - {{ experience.EndDate }}</span>
+            </div>
+            
+            <p class="experience-description">{{ experience.Description }}</p>
+            
+            <div class="experience-details">
+                <div class="tasks-section" *ngIf="experience.Tasks && experience.Tasks.length > 0">
+                    <h4>Key Responsibilities:</h4>
+                    <ul class="tasks-list">
+                        <li *ngFor="let task of experience.Tasks">{{ task }}</li>
+                    </ul>
+                </div>
+                
+                <div class="technologies-section" *ngIf="experience.Technologies && experience.Technologies.length > 0">
+                    
+                    <div class="technologies-list">
+                        <span *ngFor="let tech of experience.Technologies" class="tech-badge">{{ tech }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
