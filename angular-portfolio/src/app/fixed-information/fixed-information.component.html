@@ -1,0 +1,20 @@
+<section class="row common-container">
+    <h1 class="col-12 top-text">{{ person.Name }}</h1>
+    <h2 class="col-12">{{ person.Role }}</h2>
+    
+    <p class="col-12">{{person.SmallDescription}}</p>
+
+    <ngx-typed-js 
+        [strings]="technologies" 
+        [loop]="true" 
+        [typeSpeed]="100" 
+        (stringTyped)="onStringTyped($event)"
+        (preStringTyped)="obBeforeStringTyped($event)">
+            > <span class="typing" [ngClass]="{'red-text': isRepeat, 'white-text': !isRepeat}"></span>
+    </ngx-typed-js>
+
+    <div class="social-icons-container col-12">
+        <i class="fa-brands fa-github small-icon"></i>
+        <i class="fa-brands fa-linkedin small-icon"></i>
+    </div>
+</section>

@@ -1,13 +1,16 @@
 <header class="header">
     <nav class="nav container-fluid d-flex align-items-center">
         <ul class="nav-links d-flex align-items-center ms-auto mb-0">
-            <li class="me-3"><a [routerLink]="['/']" fragment="home" routerLinkActive="active">Home</a></li>
-            <li class="me-3"><a [routerLink]="['/experience']" fragment="experience" routerLinkActive="active">Professional
+            <li class="me-3"><a routerLink="/" fragment="home" routerLinkActive="active"
+                    ariaCurrentWhenActive="page"  [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+            <li class="me-3"><a routerLink="/experience" fragment="experience" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">Professional
                     Experience</a></li>
-            <li class="me-3"><a [routerLink]="['/projects']" fragment="projects" routerLinkActive="active">Personal
+            <li class="me-3"><a routerLink="/projects" fragment="projects" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">Personal
                     Projects</a></li>
-            <li><a [routerLink]="['/recommendations']" fragment="recommendations"
-                    routerLinkActive="active">Recommendations</a></li>
+            <li><a routerLink="/recommendations" fragment="recommendations" ariaCurrentWhenActive="page"
+                    routerLinkActive="active">Contact</a></li>
         </ul>
     </nav>
 </header>

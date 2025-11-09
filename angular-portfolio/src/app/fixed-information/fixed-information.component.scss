@@ -1,0 +1,15 @@
+.small-icon{
+    font-size: 2rem;
+}
+
+.social-icons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top:5rem;
+}
+
+.red-text{
+    color: var(--secondary-text-color);
+}

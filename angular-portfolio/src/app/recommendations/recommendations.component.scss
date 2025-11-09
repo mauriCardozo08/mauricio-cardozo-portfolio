@@ -1,0 +1,98 @@
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+    
+    label {
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+        opacity: 0.9;
+    }
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Satoshi Complete', sans-serif;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    
+    &:focus {
+        outline: none;
+        border-color: var(--secondary-text-color);
+        background-color: var(--input-focus-bg);
+    }
+    
+    &::placeholder {
+        color: var(--placeholder-color);
+    }
+    
+    &.invalid {
+        border-color: var(--secondary-text-color);
+    }
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.honeypot {
+    display: none;
+}
+
+.submit-button {
+    padding: 0.75rem 2rem;
+    background-color: var(--secondary-text-color);
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Satoshi Complete', sans-serif;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover:not(:disabled) {
+        background-color: var(--accent-hover-bg);
+        transform: translateY(-1px);
+    }
+    
+    &:active:not(:disabled) {
+        transform: translateY(0);
+    }
+    
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    
+    &.success {
+        background-color: var(--success-bg);
+        border: 1px solid var(--success-border);
+        color: var(--success-color);
+    }
+    
+    &.error {
+        background-color: var(--accent-bg);
+        border: 1px solid var(--accent-border);
+        color: var(--secondary-text-color);
+    }
+}
+

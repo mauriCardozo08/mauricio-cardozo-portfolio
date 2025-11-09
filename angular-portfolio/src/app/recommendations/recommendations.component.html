@@ -1,1 +1,63 @@
-<p>recommendations works!</p>
+<section class="row">
+    <h1 class="col-12 top-text">Contact Me</h1>
+
+    <div class="col-12">
+        <form #form="ngForm" (ngSubmit)="send(form)" novalidate>
+            <div class="col-12 row">
+                <div class="form-group col-6">
+                    <label for="from_name">Name</label>
+                    <input 
+                        id="from_name"
+                        name="from_name" 
+                        type="text"
+                        [(ngModel)]="model.from_name" 
+                        required 
+                        class="form-input"
+                        [class.invalid]="form.submitted && form.controls['from_name']?.invalid"
+                    />
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="reply_to">Your email</label>
+                    <input 
+                        id="reply_to"
+                        type="email" 
+                        name="reply_to" 
+                        [(ngModel)]="model.reply_to" 
+                        required 
+                        email 
+                        class="form-input"
+                        [class.invalid]="form.submitted && form.controls['reply_to']?.invalid"
+                    />
+                </div>
+            
+                <div class="form-group col-12">
+                    <label for="message">Your message</label>
+                    <textarea 
+                        id="message"
+                        name="message" 
+                        [(ngModel)]="model.message" 
+                        rows="5" 
+                        required
+                        class="form-textarea"
+                        [class.invalid]="form.submitted && form.controls['message']?.invalid"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="honeypot">
+                <input name="_honeypot" [(ngModel)]="model.honeypot" />
+            </div>
+
+            <button 
+                type="submit" 
+                [disabled]="form.invalid || sending"
+                class="submit-button"
+            >
+                {{ sending ? 'Sending...' : 'Send' }}
+            </button>
+
+            <p *ngIf="sent" class="message success">Thank you! Your message has been sent.</p>
+            <p *ngIf="error" class="message error">{{ error }}</p>
+        </form>
+    </div>
+</section>

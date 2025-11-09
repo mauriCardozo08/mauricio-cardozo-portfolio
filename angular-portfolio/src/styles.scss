@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Satoshi Complete';
+    src: url('assets/fonts/Satoshi_Complete/Fonts/TTF/Satoshi-VariableItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Satoshi Complete', sans-serif;
+    color: var(--text-color);
+}
+
+::root {
+    --header-height: 60px;
+    --background-color: #1e1e1e;
+    --secondary-background-color: #2e2e2e;
+    --text-color:white;
+    --secondary-text-color: #ff4c60;
+}
+
+:root {
+    /* Core palette */
+    --header-height: 60px;
+    --background-color: #1e1e1e;
+    --secondary-background-color: #2e2e2e;
+    --text-color: white;
+    --secondary-text-color: #ff4c60;
+
+    /* Accents derived from secondary color */
+    --accent-hover-bg: rgba(255, 76, 96, 0.8);
+    --accent-bg: rgba(255, 76, 96, 0.15);
+    --accent-border: rgba(255, 76, 96, 0.3);
+
+    /* Inputs */
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --input-border: rgba(255, 255, 255, 0.1);
+    --input-focus-bg: rgba(255, 255, 255, 0.08);
+    --placeholder-color: rgba(255, 255, 255, 0.4);
+
+    /* Success feedback */
+    --success-color: #4caf50;
+    --success-bg: rgba(76, 175, 80, 0.15);
+    --success-border: rgba(76, 175, 80, 0.3);
+}
+
+.common-container{
+    padding:0 1.5rem 0 3rem;
+}
+.top-text{
+    margin-top:5rem;
+}
