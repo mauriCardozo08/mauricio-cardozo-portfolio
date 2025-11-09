@@ -10,6 +10,7 @@ Personal portfolio template built with Angular. This project is 100% reusable by
 ## Repository structure
 - `angular-portfolio/`: Angular app source code
   - `src/assets/content.json`: the only file you need to modify to customize your portfolio
+  - `src/config/emailjs.config.json`: EmailJS configuration (serviceId, templateId, publicKey)
 
 ## Run locally
 1. Go to the Angular project directory:
